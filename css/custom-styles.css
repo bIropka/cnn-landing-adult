@@ -105,34 +105,6 @@ button::-moz-focus-inner {
 input:focus {
   outline: none;
 }
-input::-webkit-input-placeholder {
-  color: #EEAD58;
-  font-size: 1.27em;
-}
-input::-moz-placeholder {
-  color: #EEAD58;
-  font-size: 1.27em;
-}
-input:-moz-placeholder {
-  color: #EEAD58;
-  font-size: 1.27em;
-}
-input:-ms-input-placeholder {
-  color: #EEAD58;
-  font-size: 1.27em;
-}
-input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-input:focus::-moz-placeholder {
-  color: transparent;
-}
-input:focus:-moz-placeholder {
-  color: transparent;
-}
-input:focus:-ms-input-placeholder {
-  color: transparent;
-}
 section {
   display: block;
 }
@@ -143,9 +115,10 @@ header[role='banner'] {
   display: block;
   background: #fff;
   z-index: 101;
-}
-header[role='banner'].fixed {
   position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
 }
 header[role='banner'] .logo-header {
   display: block;
@@ -172,6 +145,12 @@ header[role='banner'] nav ul li {
 header[role='banner'] nav ul a {
   font-size: 14px;
 }
+header[role='banner'] nav ul a:hover {
+  color: #EE2030;
+}
+header[role='banner'] nav ul a.active {
+  color: #EE2030;
+}
 header[role='banner'] .phone-number {
   width: 145px;
   float: right;
@@ -193,6 +172,7 @@ header[role='banner'] .phone-number span {
   position: relative;
   z-index: 1;
   margin-bottom: -60px;
+  margin-top: 70px;
 }
 .top-section h1 {
   display: block;
@@ -807,6 +787,7 @@ header[role='banner'] .phone-number span {
 }
 .step-3 .tab-control div.active {
   border: 1px solid #EE2030;
+  opacity: 1;
 }
 .step-3 .tab-items {
   position: relative;
@@ -1165,8 +1146,8 @@ header[role='banner'] .phone-number span {
 ********** questions
 ***********************************************************************************************************************/
 .questions {
-  background: url(../source/images/background-6.png) no-repeat center;
-  background-size: 100% auto;
+  background: url(../source/images/background-6.png) no-repeat top center;
+  background-size: auto;
   padding: 75px 0;
 }
 .questions h2 {
@@ -1216,14 +1197,199 @@ header[role='banner'] .phone-number span {
   padding: 10px 35px;
 }
 /**********************************************************************************************************************
-********** header
+********** get-consultation
 ***********************************************************************************************************************/
+.get-consultation {
+  background: url(../source/images/background-7.png) no-repeat;
+  background-size: auto 100%;
+}
+.get-consultation .logo-large {
+  display: block;
+  width: 471px;
+  height: 194px;
+  background: url(../source/images/logo-large.png) no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+}
+.get-consultation .form-consultation {
+  display: block;
+  width: 500px;
+  height: 700px;
+  float: right;
+  background: url(../source/images/background-8.png) no-repeat;
+  background-size: 100%;
+  padding: 65px 70px 55px 100px;
+}
+.get-consultation .form-consultation h2 {
+  text-align: center;
+  font-size: 1.875em;
+  color: #fff;
+  font-family: 'AvenirNextCyr BoldItalic', sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin: 0 -70px 20px -100px;
+}
+.get-consultation .form-consultation label {
+  font-size: 0.875em;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'AvenirNextCyr Demi', sans-serif;
+}
+.get-consultation .form-consultation input {
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin: 10px 0 20px;
+  padding: 0 30px;
+}
+.get-consultation .form-consultation input::-webkit-input-placeholder {
+  color: #000;
+}
+.get-consultation .form-consultation input::-moz-placeholder {
+  color: #000;
+}
+.get-consultation .form-consultation input:-moz-placeholder {
+  color: #000;
+}
+.get-consultation .form-consultation input:-ms-input-placeholder {
+  color: #000;
+}
+.get-consultation .form-consultation input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.get-consultation .form-consultation input:focus::-moz-placeholder {
+  color: transparent;
+}
+.get-consultation .form-consultation input:focus:-moz-placeholder {
+  color: transparent;
+}
+.get-consultation .form-consultation input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.get-consultation .form-consultation fieldset {
+  display: block;
+  border: none;
+}
+.get-consultation .form-consultation fieldset span {
+  display: inline-block;
+  font-size: 0.875em;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'AvenirNextCyr Demi', sans-serif;
+}
+.get-consultation .form-consultation fieldset input[type='radio'] {
+  display: none;
+}
+.get-consultation .form-consultation fieldset label:before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 4px solid #fff;
+  background: #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #662F8E;
+  -moz-box-shadow: inset 0 0 0 1px #662F8E;
+  box-shadow: inset 0 0 0 1px #662F8E;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  position: relative;
+  top: 3px;
+  margin: 0 5px 0 10px;
+}
+.get-consultation .form-consultation fieldset input[type='radio']:checked + label:before {
+  background: #662F8E;
+}
+.get-consultation .form-consultation button[type='submit'] {
+  display: block;
+  width: 325px;
+  height: 55px;
+  margin: 30px auto 0;
+  background: linear-gradient(to bottom, #ee775c, #eeab0e);
+  font-size: 0.875em;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'AvenirNextCyr Demi', sans-serif;
+  -webkit-box-shadow: 0 0 30px 3px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 30px 3px rgba(255, 255, 255, 0.5);
+}
+.get-consultation .form-consultation button[type='submit']:hover {
+  background: linear-gradient(to top, #ee775c, #eeab0e);
+}
+.get-consultation .form-consultation button[type='submit']:active {
+  line-height: 60px;
+}
 /**********************************************************************************************************************
-********** header
+********** footer
 ***********************************************************************************************************************/
-/**********************************************************************************************************************
-********** header
-***********************************************************************************************************************/
-/**********************************************************************************************************************
-********** header
-***********************************************************************************************************************/
+footer[role="contentinfo"] {
+  padding: 50px 0 80px;
+}
+footer[role="contentinfo"] h2 {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'AvenirNextCyr BoldItalic', sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 20px 0;
+}
+footer[role="contentinfo"] .contacts {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 20px 45px;
+}
+footer[role="contentinfo"] .contacts a,
+footer[role="contentinfo"] .contacts span {
+  font-family: 'AvenirNextCyr Demi', sans-serif;
+  text-transform: uppercase;
+  color: #EEAD58;
+}
+footer[role="contentinfo"] .contacts a:after,
+footer[role="contentinfo"] .contacts span:after {
+  content: '\A';
+  white-space: pre;
+}
+footer[role="contentinfo"] .offices li {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 300px;
+  margin-right: 20px;
+}
+footer[role="contentinfo"] .offices li:last-child {
+  margin-right: 0;
+}
+footer[role="contentinfo"] .offices li span {
+  display: block;
+}
+footer[role="contentinfo"] .offices li span.city {
+  font-family: 'AvenirNextCyr Demi', sans-serif;
+  text-transform: uppercase;
+}
+footer[role="contentinfo"] .social-links {
+  margin-top: 20px;
+}
+footer[role="contentinfo"] .social-links li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+footer[role="contentinfo"] .social-links li:last-child {
+  margin-right: 0;
+}
+footer[role="contentinfo"] .social-links li a {
+  display: block;
+  width: 35px;
+}
+footer[role="contentinfo"] .social-links li a:hover {
+  margin-top: -5px;
+}
+footer[role="contentinfo"] .social-links li a:active {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
