@@ -874,11 +874,10 @@ header[role='banner'] .phone-number span {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-left: -40px;
 }
 .step-3 .tab-items .gallery li {
   display: block;
-  width: 390px;
+  width: 370px;
   height: 220px;
   position: relative;
   overflow: hidden;
@@ -893,7 +892,7 @@ header[role='banner'] .phone-number span {
   margin: 15px 0;
 }
 .step-3 .tab-items .gallery li:first-child {
-  padding: 30px 50px 30px 30px;
+  padding: 30px 20px;
   -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
@@ -978,13 +977,244 @@ header[role='banner'] .phone-number span {
 }
 .step-4 figure figcaption {
   display: inline-block;
+  vertical-align: top;
+  padding-left: 50px;
+  font-family: 'AvenirNextCyr LightItalic', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5625em;
+  color: #662F8E;
+  line-height: 1.2;
+  position: relative;
+}
+.step-4 figure figcaption:before {
+  content: '';
+  display: inline-block;
+  vertical-align: top;
+  width: 42px;
+  height: 49px;
+  background: url(../source/images/decor-hexagon-small.png);
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+.step-4 figure ol {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 20px auto 10px;
+  border-top: 1px solid #EEAD58;
+  border-bottom: 1px solid #EEAD58;
+}
+.step-4 figure ol li {
+  display: list-item;
+  width: 33.3333%;
+  list-style-position: inside;
+  padding: 10px 20px 10px 0;
+}
+.step-4 figure .gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 20px 0 40px;
+  position: relative;
+}
+.step-4 figure .gallery:before,
+.step-4 figure .gallery:after {
+  content: '';
+  display: block;
+  width: 406px;
+  height: 19px;
+  background: url(../source/images/decor-horizontal-small.png);
+  position: absolute;
+  right: 100%;
+  bottom: 100px;
+  z-index: -10;
+}
+.step-4 figure .gallery:after {
+  left: 100%;
+  bottom: auto;
+  top: 100px;
+}
+.step-4 figure .gallery li {
+  display: block;
+  width: 370px;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: skew(-3deg) rotate(-3deg);
+  -moz-transform: skew(-3deg) rotate(-3deg);
+  -ms-transform: skew(-3deg) rotate(-3deg);
+  -o-transform: skew(-3deg) rotate(-3deg);
+  transform: skew(-3deg) rotate(-3deg);
+  -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+  margin: 15px 0;
+}
+.step-4 figure .gallery li img {
+  display: block;
+  position: absolute;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  left: -10px;
+  top: -10px;
+  -webkit-transform: skew(3deg) rotate(3deg);
+  -moz-transform: skew(3deg) rotate(3deg);
+  -ms-transform: skew(3deg) rotate(3deg);
+  -o-transform: skew(3deg) rotate(3deg);
+  transform: skew(3deg) rotate(3deg);
 }
 /**********************************************************************************************************************
-********** header
+********** reviews
 ***********************************************************************************************************************/
+.reviews {
+  background: url(../source/images/background-5.png) no-repeat center top;
+  background-size: auto 100%;
+  padding: 95px 0;
+  text-align: center;
+}
+.reviews h2 {
+  font-size: 2.5em;
+  font-family: 'AvenirNextCyr BoldItalic', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.reviews ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 20px 0 40px;
+  position: relative;
+}
+.reviews ul li {
+  display: block;
+  width: 350px;
+  position: relative;
+}
+.reviews ul li .review-image {
+  display: block;
+  width: 350px;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: skew(-3deg) rotate(-3deg);
+  -moz-transform: skew(-3deg) rotate(-3deg);
+  -ms-transform: skew(-3deg) rotate(-3deg);
+  -o-transform: skew(-3deg) rotate(-3deg);
+  transform: skew(-3deg) rotate(-3deg);
+  -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+.reviews ul li .review-image img {
+  display: block;
+  position: absolute;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  left: -10px;
+  top: -10px;
+  -webkit-transform: skew(3deg) rotate(3deg);
+  -moz-transform: skew(3deg) rotate(3deg);
+  -ms-transform: skew(3deg) rotate(3deg);
+  -o-transform: skew(3deg) rotate(3deg);
+  transform: skew(3deg) rotate(3deg);
+}
+.reviews ul li .marker {
+  display: block;
+  width: 65px;
+  height: 46px;
+  background: url(../source/images/YouTube-icon-full_color.png);
+  background-size: cover;
+  position: absolute;
+  right: 20px;
+  top: 160px;
+  z-index: 11;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  cursor: pointer;
+}
+.reviews ul li .review-text {
+  font-family: 'AvenirNextCyr Demi', sans-serif;
+  text-transform: uppercase;
+}
+.reviews ul li:hover .review-image {
+  -webkit-box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.7);
+}
+.reviews ul li:hover .marker {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
 /**********************************************************************************************************************
-********** header
+********** questions
 ***********************************************************************************************************************/
+.questions {
+  background: url(../source/images/background-6.png) no-repeat center;
+  background-size: 100% auto;
+  padding: 75px 0;
+}
+.questions h2 {
+  font-family: 'AvenirNextCyr BoldItalic', sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  text-align: center;
+  background: linear-gradient(to right, #EE2030, #662F8E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #662F8E;
+}
+.questions .accordion {
+  width: 100%;
+  max-width: 770px;
+  margin: 30px auto 0;
+}
+.questions .accordion li {
+  display: block;
+  margin-bottom: 30px;
+}
+.questions .accordion li .accordion-header {
+  cursor: pointer;
+  padding: 0 35px;
+  height: 40px;
+  line-height: 40px;
+  background: #662F8E;
+  color: #fff;
+  font-family: 'AvenirNextCyr Demi', sans-serif;
+}
+.questions .accordion li .accordion-header .fa {
+  display: inline-block;
+  color: #fff;
+  margin-right: 10px;
+}
+.questions .accordion li .accordion-header .fa-angle-double-up {
+  display: none;
+}
+.questions .accordion li .accordion-header.active .fa-angle-double-up {
+  display: inline-block;
+}
+.questions .accordion li .accordion-header.active .fa-angle-double-down {
+  display: none;
+}
+.questions .accordion li .accordion-item {
+  display: none;
+  padding: 10px 35px;
+}
 /**********************************************************************************************************************
 ********** header
 ***********************************************************************************************************************/
