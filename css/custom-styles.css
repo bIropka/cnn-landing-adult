@@ -1,0 +1,520 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+/**********************************************************************************************************************
+********** fonts
+***********************************************************************************************************************/
+@font-face {
+  font-family: 'AvenirNextCyr Bold';
+  src: url("/source/fonts/AvenirNextCyr-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'AvenirNextCyr BoldItalic';
+  src: url("/source/fonts/AvenirNextCyr-BoldItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: 'AvenirNextCyr Demi';
+  src: url("/source/fonts/AvenirNextCyr-Demi.otf") format("opentype");
+}
+@font-face {
+  font-family: 'AvenirNextCyr Light';
+  src: url("/source/fonts/AvenirNextCyr-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: 'AvenirNextCyr LightItalic';
+  src: url("/source/fonts/AvenirNextCyr-LightItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: 'AvenirNextCyr MediumItalic';
+  src: url("/source/fonts/AvenirNextCyr-MediumItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: 'AvenirNextCyr Regular';
+  src: url("/source/fonts/AvenirNextCyr-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: 'MyriadPro Regular';
+  src: url("/source/fonts/MyriadPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: 'RUB';
+  src: url("/source/fonts/RUBSN.otf") format("opentype");
+}
+/**********************************************************************************************************************
+********** general
+***********************************************************************************************************************/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #000000;
+  font-family: 'AvenirNextCyr Regular', sans-serif;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.wrapper-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
+  background: none;
+}
+.wrapper-inner:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+a,
+button {
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-appearance: none;
+  text-decoration: none;
+}
+a:active,
+a:focus,
+.slide:focus {
+  outline: none;
+}
+button,
+button:hover,
+button:active {
+  outline: none;
+  border: none;
+}
+button::-moz-focus-inner {
+  outline: none;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+input::-webkit-input-placeholder {
+  color: #EEAD58;
+  font-size: 1.27em;
+}
+input::-moz-placeholder {
+  color: #EEAD58;
+  font-size: 1.27em;
+}
+input:-moz-placeholder {
+  color: #EEAD58;
+  font-size: 1.27em;
+}
+input:-ms-input-placeholder {
+  color: #EEAD58;
+  font-size: 1.27em;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+section {
+  display: block;
+}
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+header[role='banner'] {
+  display: block;
+  background: #fff;
+  z-index: 101;
+}
+header[role='banner'].fixed {
+  position: fixed;
+}
+header[role='banner'] .logo-header {
+  display: block;
+  width: 109px;
+  float: left;
+  margin-top: 12px;
+}
+header[role='banner'] nav {
+  display: block;
+  float: left;
+  width: calc(100% - 254px);
+  margin: 0 auto;
+  padding: 0 80px;
+}
+header[role='banner'] nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+header[role='banner'] nav ul li {
+  display: block;
+}
+header[role='banner'] nav ul a {
+  font-size: 14px;
+}
+header[role='banner'] .phone-number {
+  width: 145px;
+  float: right;
+  margin-top: 10px;
+}
+header[role='banner'] .phone-number a {
+  color: #662F8E;
+  font-size: 12px;
+}
+header[role='banner'] .phone-number span {
+  display: block;
+  font-size: 12px;
+  color: #ADADAD;
+}
+/**********************************************************************************************************************
+********** top-section
+***********************************************************************************************************************/
+.top-section {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -60px;
+}
+.top-section h1 {
+  display: block;
+  font-family: 'AvenirNextCyr BoldItalic', sans-serif;
+  font-size: 3em;
+  color: #fff;
+  margin: 0 0 175px;
+  line-height: 1;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.top-section .advantages {
+  background: url(../source/images/background-1.png) no-repeat center bottom;
+  background-size: cover;
+  text-align: center;
+  padding: 135px 0 140px;
+  position: relative;
+  z-index: 1;
+}
+.top-section .advantages ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.top-section .advantages ul li {
+  display: block;
+  font-family: 'AvenirNextCyr Bold', sans-serif;
+  color: #fff;
+  font-size: 1.0625em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 30px;
+  position: relative;
+}
+.top-section .advantages ul li:before {
+  content: '';
+  display: block;
+  width: 42px;
+  height: 24px;
+  background: url(../source/images/icon-chevron-bottom.png);
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -125px;
+}
+.top-section .advantages ul li:after {
+  content: '';
+  display: block;
+  width: 110px;
+  height: 75px;
+  background: url(../source/images/icons-sprite-1.png);
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -90px;
+}
+.top-section .advantages ul li:nth-child(2):after {
+  background-position: -110px 0;
+}
+.top-section .advantages ul li:nth-child(3):after {
+  background-position: -220px 0;
+}
+.top-section .advantages ul li:nth-child(4):after {
+  background-position: -330px 0;
+}
+.top-section .form-filter {
+  background: url(../source/images/background-2.png) no-repeat center bottom;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  top: -60px;
+  padding: 70px 0 110px;
+}
+.top-section .form-filter .custom-select {
+  display: inline-block;
+  width: 350px;
+  height: 45px;
+  text-align: left;
+  border: 1px solid #fff;
+  margin: 0 20px;
+  position: relative;
+}
+.top-section .form-filter .custom-select:nth-of-type(2) {
+  width: 270px;
+}
+.top-section .form-filter .custom-select .current-value {
+  cursor: pointer;
+}
+.top-section .form-filter .custom-select .current-value:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.top-section .form-filter .custom-select .current-value:hover {
+  background: #fff;
+}
+.top-section .form-filter .custom-select .current-value:hover span,
+.top-section .form-filter .custom-select .current-value:hover .fa {
+  color: #662F8E;
+}
+.top-section .form-filter .custom-select .current-value span {
+  display: block;
+  width: calc(100% - 35px);
+  float: left;
+  line-height: 45px;
+  padding-left: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+.top-section .form-filter .custom-select .fa {
+  line-height: 45px;
+  color: #fff;
+  font-size: 1.1em;
+}
+.top-section .form-filter .custom-select .fa-angle-double-up {
+  display: none;
+}
+.top-section .form-filter .custom-select ul {
+  display: none;
+  background: #fff;
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  top: 44px;
+  z-index: 1;
+  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+}
+.top-section .form-filter .custom-select ul li {
+  display: block;
+  padding: 0 35px 0 30px;
+  hyphens: auto;
+  line-height: 1.1;
+  margin: 10px 0;
+  color: #662F8E;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+.top-section .form-filter .custom-select ul li:hover {
+  color: #EEAD58;
+}
+.top-section .form-filter .custom-select input {
+  display: none;
+}
+.top-section .form-filter .custom-select.active ul {
+  display: block;
+}
+.top-section .form-filter .custom-select.active .fa-angle-double-down {
+  display: none;
+}
+.top-section .form-filter .custom-select.active .fa-angle-double-up {
+  display: block;
+}
+.top-section .form-filter button[type='submit'] {
+  display: block;
+  width: 270px;
+  height: 55px;
+  margin: 50px auto 0;
+  line-height: 55px;
+  color: #fff;
+  background: #EE2030;
+  -webkit-box-shadow: 0 0 30px 3px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 30px 3px rgba(255, 255, 255, 0.5);
+}
+.top-section .form-filter button[type='submit']:hover {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.top-section .form-filter button[type='submit']:active {
+  line-height: 60px;
+}
+/**********************************************************************************************************************
+********** why-china
+***********************************************************************************************************************/
+.why-china {
+  background: url(../source/images/background-3.png) no-repeat center bottom;
+  background-size: auto 100%;
+  position: relative;
+  top: -70px;
+  margin-bottom: -70px;
+}
+.why-china .wrapper-inner {
+  padding: 90px 0 280px;
+}
+.why-china h2 {
+  display: block;
+  width: 300px;
+  font-family: 'AvenirNextCyr BoldItalic', sans-serif;
+  font-size: 4em;
+  color: #fff;
+  font-style: italic;
+  float: left;
+  line-height: 1.2;
+}
+.why-china ul {
+  display: block;
+  width: 700px;
+  float: right;
+}
+.why-china ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  margin: 0 10% 8.5% 0;
+  color: #fff;
+}
+.why-china ul li:nth-child(2n) {
+  width: 40%;
+  margin: 0 0 8.5% 0;
+}
+.why-china ul li span {
+  display: block;
+  font-family: 'AvenirNextCyr Bold', sans-serif;
+  font-weight: 600;
+  color: inherit;
+}
+.why-china ul li span:first-of-type {
+  font-family: 'AvenirNextCyr BoldItalic', sans-serif;
+  font-style: italic;
+  font-size: 2.125em;
+}
+.why-china .logo-2 {
+  display: block;
+  width: 263px;
+  position: absolute;
+  left: 0;
+  bottom: 230px;
+}
+.why-china .logo-2:after {
+  content: 'Bigger FUTURE';
+  display: block;
+  position: absolute;
+  top: 105%;
+  left: 90%;
+  text-transform: uppercase;
+  font-family: 'AvenirNextCyr BoldItalic', sans-serif;
+  font-style: italic;
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+/**********************************************************************************************************************
+********** about-us
+***********************************************************************************************************************/
+.about-us {
+  position: relative;
+  padding-top: 25%;
+  border: 1px solid red;
+}
+.about-us h2 {
+  display: block;
+  width: 100%;
+  padding-top: 16.98817672682016%;
+  background: url(../source/images/background-rhombus.png);
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.about-us h2 span {
+  display: block;
+  height: 1em;
+  font-family: 'AvenirNextCyr BoldItalic', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.5em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #EE2030, #EEAD58);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #EEAD58;
+}
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
+/**********************************************************************************************************************
+********** header
+***********************************************************************************************************************/
