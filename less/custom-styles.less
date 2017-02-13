@@ -843,8 +843,9 @@ header[role='banner'] {
                 url(../source/images/background-4-center.png) no-repeat center 110%;
     padding: 75px 0 100px;
     position: relative;
-    top: -75px;
+    top: -100px;
     z-index: -10;
+    margin-bottom: -100px;
   }
 
   @media (max-width: 768px) {
@@ -923,8 +924,8 @@ header[role='banner'] {
       }
 
       &:nth-child(2):before {
-        width: 377px;
-        background-position: -105px 0;
+        width: 180px;
+        background-position: -190px 0;
       }
 
       &:nth-child(3):before {
@@ -954,10 +955,19 @@ header[role='banner'] {
       @media (max-width: 980px) {
         display: block;
         width: 300px!important;
-        margin: 160px auto 0;
+        margin: 0 auto 180px;
+
+        &:before {
+          bottom: -115px;
+          top: auto;
+        }
+
+        &:nth-child(1) {
+          margin-top: 50px;
+        }
 
         &:nth-child(2):before {
-          left: -38px;
+          left: -10px;
         }
 
       }
@@ -1609,6 +1619,7 @@ header[role='banner'] {
           -webkit-box-shadow: none;
           -moz-box-shadow: none;
           box-shadow: none;
+          overflow: auto;
         }
 
         img {
