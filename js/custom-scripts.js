@@ -4,6 +4,38 @@ $(document).ready(function () {
      ******* init scripts
      ******************************************************************************************************************/
 
+    if ($(window).width() < '981'){
+
+        $('header .phone-number').appendTo('nav');
+        $('.logo-header').insertBefore('header');
+        $('.logo-large').prependTo('.form-consultation');
+
+    } else {
+
+        $('header .phone-number').insertAfter('nav');
+        $('.logo-header').prependTo('header');
+        $('.logo-large').insertBefore('.form-consultation');
+
+    }
+
+    $(window).resize(function(){
+
+        if ($(window).width() < '981'){
+
+            $('header .phone-number').appendTo('nav');
+            $('.logo-header').insertBefore('header');
+            $('.logo-large').prependTo('.form-consultation');
+
+        } else {
+
+            $('header .phone-number').insertAfter('nav');
+            $('.logo-header').prependTo('header');
+            $('.logo-large').insertBefore('.form-consultation');
+
+        }
+
+    });
+
     /******************************
      ****** scroll scripts ********
      ******************************/
@@ -11,7 +43,7 @@ $(document).ready(function () {
     $('a[href^="#"]').click(function(){
 
         if ($(window).width() < '981'){
-            $('.burger').removeClass('active');
+            $('nav').removeClass('active');
         }
 
         var target = $(this).attr('href');
@@ -109,13 +141,17 @@ $(document).ready(function () {
 
     $('.tab-control div').click(function() {
 
-        var index = $(this).index();
+        if ($(window).width() < '981'){
 
-        $('.tab-control div.active').removeClass('active');
-        $(this).addClass('active');
+            var index = $(this).index();
 
-        $('.tab-items .item.active').removeClass('active');
-        $('.tab-items .item').eq(index).addClass('active');
+            $('.tab-control div.active').removeClass('active');
+            $(this).addClass('active');
+
+            $('.tab-items .item.active').removeClass('active');
+            $('.tab-items .item').eq(index).addClass('active');
+
+        }
 
     });
 
@@ -124,6 +160,12 @@ $(document).ready(function () {
        $(this).siblings('.accordion-item').slideToggle();
 
        $(this).parent().siblings('li').find('.accordion-item').slideUp();
+
+    });
+
+    $('.burger').click(function() {
+
+        $(this).parents('nav').toggleClass('active');
 
     });
 
