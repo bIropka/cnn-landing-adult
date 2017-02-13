@@ -13,7 +13,7 @@ $(document).ready(function () {
     } else {
 
         $('header .phone-number').insertAfter('nav');
-        $('.logo-header').prependTo('header');
+        $('.logo-header').prependTo('header .wrapper-inner');
         $('.logo-large').insertBefore('.form-consultation');
 
     }
@@ -29,7 +29,7 @@ $(document).ready(function () {
         } else {
 
             $('header .phone-number').insertAfter('nav');
-            $('.logo-header').prependTo('header');
+            $('.logo-header').prependTo('header .wrapper-inner');
             $('.logo-large').insertBefore('.form-consultation');
 
         }
@@ -141,7 +141,7 @@ $(document).ready(function () {
 
     $('.tab-control div').click(function() {
 
-        if ($(window).width() < '981'){
+        if ($(window).width() > '981'){
 
             var index = $(this).index();
 
@@ -168,12 +168,6 @@ $(document).ready(function () {
         $(this).parents('nav').toggleClass('active');
 
     });
-
-
-
-    /******************************************************************************************************************
-     ******* slider scripts
-     ******************************************************************************************************************/
 
 
 });
