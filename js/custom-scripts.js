@@ -156,10 +156,11 @@ $(document).ready(function () {
     });
 
     $('.accordion-header').click(function() {
+        $(this).parent().siblings('li').find('.accordion-item').slideUp();
+        $(this).parent().siblings('li').find('.accordion-header').removeClass('active');
 
-       $(this).siblings('.accordion-item').slideToggle();
-
-       $(this).parent().siblings('li').find('.accordion-item').slideUp();
+        $(this).siblings('.accordion-item').slideToggle();
+        $(this).toggleClass('active');
 
     });
 
