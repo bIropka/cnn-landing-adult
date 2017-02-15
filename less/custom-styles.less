@@ -658,7 +658,7 @@ header[role='banner'] {
 
     }
 
-    button[type='submit'] {
+    .to-form {
       display: block;
       width: 270px;
       height: 55px;
@@ -2083,9 +2083,7 @@ header[role='banner'] {
 
       .accordion-header {
         cursor: pointer;
-        padding: 0 35px;
-        height: 40px;
-        line-height: 40px;
+        padding: 5px 35px;
         background: @color-purple;
         color: #fff;
         font-family: 'AvenirNextCyr Demi', sans-serif;
@@ -2093,7 +2091,10 @@ header[role='banner'] {
         .fa {
           display: inline-block;
           color: #fff;
-          margin-right: 10px;
+          margin-right: 15px;
+          float: left;
+          position: relative;
+          top: 2px;
         }
 
         .fa-angle-double-up {
@@ -2106,6 +2107,12 @@ header[role='banner'] {
 
         &.active .fa-angle-double-down {
           display: none;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          float: left;
         }
 
       }
