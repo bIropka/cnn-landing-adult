@@ -2036,6 +2036,11 @@ header[role='banner'] {
         -o-transition: .4s;
         transition: .4s;
         cursor: pointer;
+
+        @media (max-width: 540px) {
+          top: 130px;
+        }
+
       }
 
       .review-text {
@@ -2071,7 +2076,14 @@ header[role='banner'] {
     @media (max-width: 540px) {
 
       li {
-        margin-left: ~"calc(50% - 165px)";
+        width: 300px;
+        margin: 15px 0;
+      }
+
+      li .review-image {
+        width: 300px;
+        height: 200px;
+        margin: 0 0 20px 0;
       }
 
     }
