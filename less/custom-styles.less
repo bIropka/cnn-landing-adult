@@ -2379,6 +2379,8 @@ header[role='banner'] {
 
       span {
         display: inline-block;
+        vertical-align: top;
+        width: ~"calc(100% - 120px)";
         font-size: 0.875em;
         color: #fff;
         text-transform: uppercase;
@@ -2444,6 +2446,7 @@ header[role='banner'] {
     background: none;
     margin-top: 220px;
 
+
     .form-consultation {
       width: 100%;
       max-width: 450px;
@@ -2452,6 +2455,13 @@ header[role='banner'] {
       float: none;
       position: relative;
       padding: 50px;
+
+      h2 {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+        white-space: normal;
+      }
 
       > img {
         display: block;
@@ -2473,6 +2483,7 @@ header[role='banner'] {
 
     fieldset span {
       display: block!important;
+      width: 100%!important;
       margin-bottom: 5px;
     }
 
