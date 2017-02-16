@@ -1497,6 +1497,7 @@ header[role='banner'] {
       -ms-transition: .4s;
       -o-transition: .4s;
       transition: .4s;
+      position: relative;
 
       &:hover {
         opacity: 1;
@@ -1507,6 +1508,39 @@ header[role='banner'] {
         opacity: 1;
       }
 
+      .tooltip {
+        display: none;
+
+        &.active {
+          display: block;
+          padding: 10px;
+          text-align: left;
+          width: 240px;
+          border: 1px solid @color-purple;
+          background: #fff;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          font-size: 1em;
+          text-transform: uppercase;
+          position: absolute;
+          left: 0;
+          bottom: 70px;
+          z-index: 10;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  @media (max-width: 360px) {
+
+    .tab-control div:nth-of-type(3n - 1) .tooltip {
+      left: -85px!important;
+      right: -85px!important;
     }
 
   }
@@ -1609,7 +1643,7 @@ header[role='banner'] {
         margin: 15px 0;
 
         &:first-child {
-          padding: 30px 20px;
+          padding: 20px;
           -webkit-transform: none;
           -moz-transform: none;
           -ms-transform: none;
@@ -1751,15 +1785,14 @@ header[role='banner'] {
       }
     }
 
-  }
-
-  @media (max-width: 768px) {
-    padding-bottom: 75px;
-
     .tab-items {
       display: none;
     }
 
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 75px;
   }
 
 }
@@ -2303,10 +2336,8 @@ header[role='banner'] {
 
         li {
           display: block;
-          padding: 0 35px 0 30px;
+          padding: 10px 35px 10px 30px;
           hyphens: auto;
-          height: 45px;
-          line-height: 45px;
           margin: 10px 0;
           color: @color-purple;
           cursor: pointer;
@@ -2559,6 +2590,307 @@ footer[role="contentinfo"] {
       margin: 10px 0;
     }
 
+  }
+
+}
+
+/**********************************************************************************************************************
+********** window
+***********************************************************************************************************************/
+
+.window {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  text-align: center;
+  z-index: 1000;
+  overflow: auto;
+}
+
+.form-order {
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  padding: 20px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 101;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+
+  @media (max-width: 480px) {
+    width: 320px;
+  }
+
+  .title {
+    text-transform: uppercase;
+  }
+
+  label {
+    display: block;
+    margin: 15px 0;
+
+    input {
+      display: block;
+      width: 100%;
+      height: 40px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      border: 1px solid #888888;
+      padding: 10px 15px;
+
+      &::-webkit-input-placeholder {color: #000;font-size: .8em;}
+      &::-moz-placeholder {color: #000;font-size: .8em;}
+      &:-moz-placeholder {color: #000;font-size: .8em;}
+      &:-ms-input-placeholder {color: #000;font-size: .8em;}
+
+      &:focus::-webkit-input-placeholder {color: transparent;}
+      &:focus::-moz-placeholder {color: transparent;}
+      &:focus:-moz-placeholder {color: transparent;}
+      &:focus:-ms-input-placeholder {color: transparent;}
+
+    }
+  }
+
+  .custom-select {
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    background: #fff;
+    margin: 15px 0;
+    position: relative;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #888888;
+
+    .current-value {
+      cursor: pointer;
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      span {
+        display: block;
+        width: ~"calc(100% - 25px)";
+        float: left;
+        line-height: 40px;
+        padding-left: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #000;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -ms-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s;
+        font-size: .8em;
+      }
+
+      .fa {
+        display: block;
+        float: right;
+        width: 25px;
+        height: 45px;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        font-size: 1.1em;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -ms-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s;
+      }
+
+      .fa-angle-double-up {
+        display: none;
+      }
+
+      &:hover .fa,
+      &:hover span {
+        color: @color-orange;
+      }
+
+    }
+
+    ul {
+      display: none;
+      max-height: 105px;
+      overflow: auto;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 44px;
+      z-index: 1;
+      -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .25);
+      -moz-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .25);
+      box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .25);
+
+      li {
+        display: block;
+        padding: 5px 20px;
+        hyphens: auto;
+        margin: 5px 0;
+        color: #000;
+        cursor: pointer;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -ms-transition: .4s;
+        -o-transition: .4s;
+        transition: .4s;
+        font-size: .8em;
+
+        &:hover {
+          color: @color-orange;
+        }
+
+      }
+
+    }
+
+    input {
+      display: none;
+    }
+
+    &.active ul {
+      display: block;
+    }
+
+    &.active .fa-angle-double-down {
+      display: none;
+    }
+
+    &.active .fa-angle-double-up {
+      display: block;
+    }
+
+  }
+
+  button[type='submit'] {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 15px auto 0;
+    background: linear-gradient(to bottom, #ee775c, #eeab0e);
+    font-size: 0.875em;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'AvenirNextCyr Demi', sans-serif;
+    -webkit-box-shadow: 0 0 30px 3px rgba(255, 255, 255, .5);
+    -moz-box-shadow: 0 0 03px 3px rgba(255, 255, 255, .5);
+    box-shadow: 0 0 30px 3px rgba(255, 255, 255, .5);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    &:hover {
+      background: linear-gradient(to top, #ee775c, #eeab0e);
+    }
+
+    &:active {
+      line-height: 43px;
+    }
+  }
+
+  .close-marker {
+    display: block;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+  .close-marker:before,
+  .close-marker:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    position: absolute;
+    left: 0;
+  }
+
+  .close-marker:active:before,
+  .close-marker:active:after {
+    background: #000;
+  }
+
+  .close-marker:before {
+    bottom: 9px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .close-marker:after {
+    top: 9px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .close-marker:hover:before {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .close-marker:hover:after {
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-origin: center;
+    transform-origin: center;
   }
 
 }
