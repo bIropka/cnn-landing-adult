@@ -2637,13 +2637,11 @@ footer[role="contentinfo"] {
 .form-order {
   position: absolute;
   width: 400px;
-  height: 450px;
   padding: 20px;
   margin: auto;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
+  top: 15%;
   background-color: #ffffff;
   z-index: 101;
   -webkit-border-radius: 15px;
@@ -2672,15 +2670,35 @@ footer[role="contentinfo"] {
       border: 1px solid #888888;
       padding: 10px 15px;
 
-      &::-webkit-input-placeholder {color: #000;font-size: .8em;}
-      &::-moz-placeholder {color: #000;font-size: .8em;}
-      &:-moz-placeholder {color: #000;font-size: .8em;}
-      &:-ms-input-placeholder {color: #000;font-size: .8em;}
+      &::-webkit-input-placeholder {
+        color: #000;
+        font-size: .8em;
+      }
+      &::-moz-placeholder {
+        color: #000;
+        font-size: .8em;
+      }
+      &:-moz-placeholder {
+        color: #000;
+        font-size: .8em;
+      }
+      &:-ms-input-placeholder {
+        color: #000;
+        font-size: .8em;
+      }
 
-      &:focus::-webkit-input-placeholder {color: transparent;}
-      &:focus::-moz-placeholder {color: transparent;}
-      &:focus:-moz-placeholder {color: transparent;}
-      &:focus:-ms-input-placeholder {color: transparent;}
+      &:focus::-webkit-input-placeholder {
+        color: transparent;
+      }
+      &:focus::-moz-placeholder {
+        color: transparent;
+      }
+      &:focus:-moz-placeholder {
+        color: transparent;
+      }
+      &:focus:-ms-input-placeholder {
+        color: transparent;
+      }
 
     }
   }
@@ -2914,6 +2932,46 @@ footer[role="contentinfo"] {
     -ms-transform-origin: center;
     -o-transform-origin: center;
     transform-origin: center;
+  }
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  .error-message {
+    font-size: smaller;
+    color: red;
+    display: none;
+  }
+
+  input[type='checkbox'] + label {
+    text-align: left;
+    padding-left: 30px;
+    position: relative;
+    font-size: 14px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: 3px solid #fff;
+      background: #fff;
+      -webkit-box-shadow: 0 0 0 1px #000;
+      -moz-box-shadow: 0 0 0 1px #000;
+      box-shadow: 0 0 0 1px #000;
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+
+  }
+
+  input[type='checkbox']:checked + label:before {
+    background: #000;
+    -webkit-box-shadow: 0 0 0 1px #000;
+    -moz-box-shadow: 0 0 0 1px #000;
+    box-shadow: 0 0 0 1px #000;
   }
 
 }

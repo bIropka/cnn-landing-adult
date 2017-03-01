@@ -200,5 +200,14 @@ $(document).ready(function () {
         if ($target.hasClass('close-marker')) $('.window').fadeOut();
     });
 
+    $('.form-order button[type="submit"]').click(function() {
+        if(!document.getElementById("email-ok").checked) {
+            $('.error-message').fadeIn();
+            return false;
+        } else {
+            $('.error-message').fadeOut();
+        }
+    });
+
 
 });
