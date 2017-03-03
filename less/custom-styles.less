@@ -2203,7 +2203,7 @@ header[role='banner'] {
   .form-consultation {
     display: block;
     width: 500px;
-    height: 700px;
+    height: auto;
     float: right;
     background: url(../source/images/background-8.png) no-repeat;
     background-size: 100% 100%;
@@ -2388,6 +2388,7 @@ header[role='banner'] {
     fieldset {
       display: block;
       border: none;
+      margin-bottom: 15px;
 
       span {
         display: inline-block;
@@ -2427,6 +2428,47 @@ header[role='banner'] {
         cursor: auto;
       }
 
+    }
+
+    input[type='checkbox'] {
+      display: none;
+    }
+
+    .error-message {
+      font-size: smaller;
+      color: red;
+      display: none;
+      margin-bottom: 15px;
+    }
+
+    input[type='checkbox'] + label {
+      text-align: left;
+      padding-left: 30px;
+      position: relative;
+      font-size: 14px;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: 3px solid #fff;
+        background: #fff;
+        -webkit-box-shadow: 0 0 0 1px @color-purple;
+        -moz-box-shadow: 0 0 0 1px @color-purple;
+        box-shadow: 0 0 0 1px @color-purple;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+    }
+
+    input[type='checkbox']:checked + label:before {
+      background: @color-purple;
+      -webkit-box-shadow: 0 0 0 1px @color-purple;
+      -moz-box-shadow: 0 0 0 1px @color-purple;
+      box-shadow: 0 0 0 1px @color-purple;
     }
 
     button[type='submit'] {

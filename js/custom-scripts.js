@@ -209,5 +209,14 @@ $(document).ready(function () {
         }
     });
 
+    $('.get-consultation button[type="submit"]').click(function() {
+        if(!document.getElementById("consultation-email-ok").checked) {
+            $('.error-message').fadeIn();
+            return false;
+        } else {
+            $('.error-message').fadeOut();
+        }
+    });
+
 
 });
